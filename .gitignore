@@ -1,0 +1,83 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ===== 虚拟环境 =====
+.venv/
+venv/
+ENV/
+env/
+.venv2/
+env.bak/
+venv.bak/
+
+# ===== 测试 / 覆盖率 =====
+.pytest_cache/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.tox/
+.nox/
+htmlcov/
+
+# ===== PyCharm / IDE =====
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+.vscode/
+
+# ===== Jupyter Notebook =====
+.ipynb_checkpoints/
+
+# ===== 环境变量 / 密钥 =====
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ===== macOS =====
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# ===== 日志 / 临时文件 =====
+*.log
+logs/
+*.tmp
+*.bak
+*.swp
+*~
+
+# ===== 数据库 / 数据文件 =====
+*.sqlite3
+*.db

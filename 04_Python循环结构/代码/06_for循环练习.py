@@ -1,0 +1,70 @@
+
+# 练习
+# 1.求1-100之间可以被6整除的数的个数
+num = 0
+for i in range(1, 101):
+    if i % 6 == 0:
+        num += 1
+print(num)
+
+# 2.计算1到100以内所有偶数的和。
+sum = 0
+for i in range(1, 101):
+    if i % 2 == 0:
+        sum = sum + i
+print(sum)
+
+# 3.计算1到100以内所有能被3或者7整除的数的和。
+sum = 0
+for i in range(1, 101):
+    if i % 3 == 0 or i % 7 == 0:
+        sum = sum + i
+print(sum)
+
+# 4.计算1到100以内能同时被7和3整除的数的个数。
+num = 0
+for i in range(1, 101):
+    if i % 7 == 0 and i % 3 == 0:
+        num += 1
+print(num)
+
+
+# 5. 求 1-2 + 3-4 + 5-6 ……… + 97-98 + 99-100的结果
+result = 0
+for i in range(1, 101):
+    if i % 2 == 0:
+        result -= i
+    else:
+        result += i
+print(result)
+
+
+
+# 扩展题目：
+# 6. 求 1/1 - 1/2 + 1/3 - 1/4 + 1/5 - 1/6 ……… + 1/97 - 1/98 + 1/99 - 1/100的结果
+
+result = 0
+for i in range(1, 101):
+    if i % 2 == 0:
+        result -= 1/i
+    else:
+        result += 1/i
+print(result)
+
+# 7.丈母娘要彩礼:
+#   小伙马上要准备结婚，丈母娘看小伙实诚，同意让小伙分30期给彩礼，分期规则如下
+#   分期： 第1天给1分钱
+#         第2天给2分钱
+#         第3天给4分钱
+#         第4天给8分钱
+#         第5天给16分钱
+#         ...
+#         第30天
+# 如果是你，会同意吗,为什么？
+
+result = 0
+for i in range(0, 30):
+    result += 2 ** i
+print(result//100)
+
+

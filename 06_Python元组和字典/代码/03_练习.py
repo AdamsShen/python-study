@@ -49,3 +49,8 @@ douyu = {
         "pgcnt": 6
     }
 }
+
+list = douyu.get('data').get('rl')
+for i in list:
+    print(i.get('nn'), i.get('rs1'))
+

@@ -14,6 +14,6 @@ print(list(range(0, 5)))#[0, 1, 2,3, 4]
 print(list(range(2, 5)))  #[2, 3, 4]
 print(list(range(6, 2)))# []
 print(list(range(2, 9, 2)))# [2, 4, 6, 8]
-print(list(range(6, 2, -1)))# [2, 4, 6, 8]
+print(list(range(6, 2, -1)))# [6, 5, 4, 3]
 
 

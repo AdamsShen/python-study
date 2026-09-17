@@ -1,21 +1,26 @@
-import time
+
 
 
 # time模块
 #   time.time()  # 当前时间
 #   time.sleep() # 暂停,休眠, 单位:秒
-# 当前时间, 时间戳timestamp:从1970年1月1日0点到现在所经过的秒
+
+
+# 当前时间, 时间戳timestamp: 从1970年1月1日0点到现在所经过的秒
 # 1s = 1000ms 毫秒
 # 1ms = 1000us 微秒
 # 1us = 1000ns 纳秒
+import time
 
-
+print(time.time())
+time.sleep(0.1)
 
 # datetime: 日期时间,
 #   对time做了封装,比time更好用
 #   date: 日期,表示年月日
 #   time: 时间,表示时分秒
 import datetime
+
 
 # 1.创建日期对象
 

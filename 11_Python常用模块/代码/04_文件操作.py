@@ -60,7 +60,11 @@ fp.write('hello 马克'.encode())
 fp.close()
 
 
-# with-as : 会自动关闭文件
+
+# with-as : 会自动关闭文件, 建议这样写，抛异常也会关闭文件
+with open('b.txt', 'r', encoding='utf-8') as fp:
+    print(fp.read())
+
 
 
 

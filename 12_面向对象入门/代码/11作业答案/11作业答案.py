@@ -1,3 +1,4 @@
+from certifi import contents
 
 # 1. 自定义模块:
 #   a.建立一个包：test
@@ -15,10 +16,40 @@
 #   c.在另外一个文件中 aa.py导入上述包中的模块sort.py，完成模块中功能的调用
 #
 
+from test import sort
+
+print(sort.find_index([1, 2, 3, 4, 5, 1, 1], 1 ))
+
+# if __name__ == '__main__':
+#     l = [3, 1, 4, 1, 5, 9, 2, 6]
+#     print('原列表:', l)
+#     print('降序:', sort.sort1(l))
+#     print('升序:', sort.sort2(l))
+#     print('1 出现的下标:', sort.find_index(l, 1))
+#     print('原列表未被修改:', l)
+
+
+
 
 # 2. 开房查询
 # 	创建函数，传入一个名字，查找到这哥们的开房记录，
 #       然后把身份证号码和地址取出来，写入到以这哥们名字为名的txt文件中 如：张三.txt
 
-def fn(name):
-    pass
+
+print()
+print()
+def fn(name='包程飞'):
+    with open(f'{name}.txt', 'a', encoding='utf-8') as fw:
+        with open('kaifanglist.txt', 'r', encoding='utf-8') as fp:
+            contents = fp.readlines()
+            # print(list1)
+            for row in contents:
+                list2 = row.split(',')
+                if list2[0] == name:
+                    print(list2[1], list2[4])
+                    fw.write(list2[1] + ' ' + list2[4] + '\n')
+
+
+fn('吴晓龙')
+
+

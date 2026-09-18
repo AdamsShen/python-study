@@ -1,9 +1,12 @@
+# 1.Python内部提供的包或模块（官方）
+# 2.我们自己写的包或模块（自己的）
+# 3.别人写的包或模块：第三方包的
 
 
 # 安装第三方包
 #  1.在pycharm的settings中去安装
 #  2.先导入包名,如果报错,鼠标悬停到包名,根据提示安装
-#  3.命令安装:
+#  3.命令安装:  (重要，推荐)
 #       pip install numpy 安装包
 #       pip uninstall numpy 卸载包
 #       pip show numpy  查看包详情
@@ -17,8 +20,9 @@
 
 #   设置永久镜像:
 #       pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+import requests
 
-'''
+# '''
 import requests
 
 import numpy as np
@@ -28,4 +32,4 @@ import matplotlib.pyplot as plt  # matplotlib
 import flask
 import tornado
 
-'''
+# '''

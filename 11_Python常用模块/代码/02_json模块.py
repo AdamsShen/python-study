@@ -7,12 +7,16 @@ import json
 #    2.json对象(Python字典)
 
 
+
 # json解析(json反序列化): (重点)
 #   字符串 => Python字典
-
+s = '{"name": "邓超", "age": 40}'
+d= json.loads(s) #用来反序列化字符串，非文件操作
+print(d, type(d)) # {'name':'邓超','age': 40} <class 'dict'>
 
 
 # json序列化:  (了解)
 #    Python字典 => 字符串
-
+s2 = json.dumps(d)  # 非文件操作
+print(s2, type(s2))  #{"name": "\u9093\u8d85", "age": 40} <class 'str'>
 

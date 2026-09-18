@@ -1,10 +1,27 @@
-
+1
 
 # 生成器 generator (掌握)
 #  需要使用next或者for循环来调用
 
+# nums = [i for i in range(1, 6)] #列表推导式
+
+g = (i for i in range(1, 4)) #生成器
+
+print(g) # generator 生成器对象
+# print(list(g)) # [1, 2, 3]
+
+# 1.next
+print(next(g)) #1
+print(next(g)) #2
+print(next(g)) #3
+# print(next(g) # StopIteration 报错，已经没有数据了
 
 
+print()
+# 2.for
+g2 = (i for i in range(1, 4))
+for i in g2:
+    print('i =', i)
 
 
 
@@ -13,6 +30,20 @@
 #   2. 需要用next来调用
 #   3. 每个next都会在yield处暂停
 #   4. yield 会暂停, 可以返回值
+print()
+
+def fn():
+    print('hello,我是fn，你看我会执行吗')
+    yield
+    yield 666  # 类似return的返回值，但是不会结束函数
+    print('BBBBB')
+    yield 888
+
+g = fn()
+print(g) # generator object
+print(next(g))   # None
+print(next(g))  # 666
+print(next(g)) #  888
 
 
 
@@ -27,11 +58,11 @@ def gen():
         yield i
 
 
-g = gen()
-print(next(g))
-print(next(g))
-print(next(g))
-print()
+# g = gen()
+# print(next(g))
+# print(next(g))
+# print(next(g))
+# print()
 
 
 
